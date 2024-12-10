@@ -12,7 +12,7 @@ class TestTask(unittest.TestCase):
             task = Task("Test Task", priority="High", deadline="2024-12-31")
             self.assertFalse(task.completed)
             task.mark_done()
-            self.assertEqual(task.completed)
+            self.assertTrue(task.completed)
             
 if __name__ == '__main__':
     unittest.main()
