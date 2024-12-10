@@ -9,8 +9,11 @@ on:
       - main
 jobs:
   test:
-    runs-on: ubuntu-latest
-
+    runs-on: ${{ matrix.os }} 
+    
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest] 
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
